@@ -131,17 +131,119 @@
 
 
 /* esercizio 11 */
-.ex-11-icon {
+.ex-11-icon:hover{
     font-size: 60px;
-    animation: rotation 1s linear;
-    animation-iteration-count: infinite;
+    animation: halfRotation 2s linear;
 }
 
-@keyframes rotation{
+@keyframes halfRotation{
     0%{
         rotate: 0deg;
     }
+    85%{
+        rotate: calc(360deg - 40deg);
+    }
     100%{
-        rotate: -360deg;
+        rotate: 0deg;
+        transition: 0.1s ease-out;
+    }
+}
+
+.ex-12-bottom-white, .ex-13-bottom-white {
+    position: absolute;
+    bottom: -10px;
+    right: 20%;
+    background: #f5f5f5;
+    width: 60px;
+    height: 20px;
+}
+
+/* esercizio 12 */
+
+.ex-12-top-white {
+    position: absolute;
+    top: -10px;
+    left: 10%;
+    background: #f5f5f5;
+    width: 60px;
+    height: 20px;
+}
+
+.ex-12-bottom-white {
+    position: absolute;
+    bottom: -10px;
+    right: 20%;
+    background: #f5f5f5;
+    width: 60px;
+    height: 20px;
+}
+
+a.ex-12-button:hover .ex-12-top-white{
+    animation: moveTop 2s ease-in-out;
+}
+
+a.ex-12-button:hover .ex-12-bottom-white{
+    animation: moveBottom 2s ease-in-out;
+}
+
+@keyframes moveTop{
+    0%{
+
+    }
+    50%{
+        left: 56%;
+    }
+}
+
+@keyframes moveBottom{
+    0%{
+
+    }
+    50%{
+       right: 60%;
+    }
+}
+
+/* esercizio 13 */
+
+.ex-13-top-white {
+    position: absolute;
+    top: -10px;
+    left: 10%;
+    background: #f5f5f5;
+    width: 60px;
+    height: 20px;
+    animation: es13top 3s linear;
+}
+
+.ex-13-bottom-white {
+    position: absolute;
+    bottom: -10px;
+    right: 20%;
+    background: #f5f5f5;
+    width: 60px;
+    height: 20px;
+    
+}
+
+@keyframes es13top{
+    0%{
+
+    }
+    25%{
+
+        
+    }
+    26%{
+
+    }
+    50%{
+
+        }
+    75%{
+
+    }
+    100%{
+
     }
 }
